@@ -16,6 +16,7 @@
 		ED4CFD592D28A1C900C96700 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4CFD4C2D28A1C900C96700 /* Main.storyboard */; };
 		ED4CFD5D2D28A5E000C96700 /* CountViewCon.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4CFD5C2D28A5E000C96700 /* CountViewCon.swift */; };
 		ED4CFD5F2D28A61900C96700 /* MapViewCon.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4CFD5E2D28A61900C96700 /* MapViewCon.swift */; };
+		ED4CFD612D2A02C600C96700 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4CFD602D2A02C600C96700 /* LocationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		ED4CFD512D28A1C900C96700 /* Spotter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Spotter.xcdatamodel; sourceTree = "<group>"; };
 		ED4CFD5C2D28A5E000C96700 /* CountViewCon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountViewCon.swift; sourceTree = "<group>"; };
 		ED4CFD5E2D28A61900C96700 /* MapViewCon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCon.swift; sourceTree = "<group>"; };
+		ED4CFD602D2A02C600C96700 /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -116,6 +118,7 @@
 				ED4CFD4D2D28A1C900C96700 /* SceneDelegate.swift */,
 				ED4CFD4F2D28A1C900C96700 /* ViewController.swift */,
 				ED4CFD5C2D28A5E000C96700 /* CountViewCon.swift */,
+				ED4CFD602D2A02C600C96700 /* LocationController.swift */,
 				ED4CFD5E2D28A61900C96700 /* MapViewCon.swift */,
 				ED4CFD4C2D28A1C900C96700 /* Main.storyboard */,
 				ED4CFD472D28A1C900C96700 /* Assets.xcassets */,
@@ -276,6 +279,7 @@
 				ED4CFD5D2D28A5E000C96700 /* CountViewCon.swift in Sources */,
 				ED4CFD542D28A1C900C96700 /* Spotter.xcdatamodeld in Sources */,
 				ED4CFD552D28A1C900C96700 /* ViewController.swift in Sources */,
+				ED4CFD612D2A02C600C96700 /* LocationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,12 +341,15 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Spotter/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Spotter uses location services to record the location of spottings.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Spotter uses location services to record the location of spottings.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Spotter uses location services to record the location of spottings.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -365,12 +372,15 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Spotter/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Spotter uses location services to record the location of spottings.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Spotter uses location services to record the location of spottings.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Spotter uses location services to record the location of spottings.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
