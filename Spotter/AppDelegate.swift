@@ -12,6 +12,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
+		fetchReq.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
 		return true
 	}
 	
@@ -30,6 +31,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}
 	
 	func applicationWillTerminate(_ application: UIApplication) {
+		saveContext()
+	}
+	
+	func applicationDidEnterBackground(_ application: UIApplication) {
+		saveContext()
+	}
+	
+	func applicationDidReceiveMemoryWarning(_ application: UIApplication) {
 		saveContext()
 	}
 	
@@ -91,3 +100,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	
 }
 
+extension LogEntry {
+	func string(df: DateFormatter) -> String {
+		return df.string(from: date!) + " at " + String(format: "%.5f", lat) + ", " + String(format: "%.5f", lon)
+	}
+}

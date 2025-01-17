@@ -23,7 +23,7 @@ class LogEntryTableDataSource: NSObject, UITableViewDataSource {
 
 	override init() {
 		entries = appDel.fetchAllLogEntries()
-		df.dateFormat = "yyyy-MM-dd 'at' HH:mm:ss"
+		df.dateFormat = "yyyy-MM-dd 'at' h:mm:ss a"
 	}
 	
 	func numberOfSections(in tableView: UITableView) -> Int {
@@ -36,7 +36,10 @@ class LogEntryTableDataSource: NSObject, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell")!
-		cell.textLabel?.text = df.string(for: entries![indexPath.row].date)
+		cell.textLabel?.lineBreakMode = .byWordWrapping
+		cell.textLabel?.numberOfLines = 3
+		
+		cell.textLabel?.text = entries![indexPath.row].string(df: df)
 		return cell
 	}
 
