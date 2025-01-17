@@ -61,33 +61,45 @@
                                     <action selector="addButtonPressed:" destination="1V6-ai-25H" eventType="touchUpInside" id="tWK-7Q-NOl"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Te1-3M-MdK">
-                                <rect key="frame" x="77" y="149" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cmo-T9-wMU">
+                                <rect key="frame" x="0.0" y="59" width="393" height="443"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Qbw-8S-K0R">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qbw-8S-K0R" id="qFg-pt-751">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ptI-6c-6zQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="cmo-T9-wMU" firstAttribute="trailing" secondItem="ptI-6c-6zQ" secondAttribute="trailing" id="4gS-AN-lo8"/>
+                            <constraint firstItem="cmo-T9-wMU" firstAttribute="leading" secondItem="ptI-6c-6zQ" secondAttribute="leading" id="4xZ-Md-376"/>
                             <constraint firstItem="YpD-Gn-yd8" firstAttribute="centerX" secondItem="ptI-6c-6zQ" secondAttribute="centerX" id="9bj-MM-w0s"/>
                             <constraint firstItem="ptI-6c-6zQ" firstAttribute="bottom" secondItem="YpD-Gn-yd8" secondAttribute="bottom" constant="32" id="mSV-uq-WEm"/>
+                            <constraint firstItem="YpD-Gn-yd8" firstAttribute="top" secondItem="cmo-T9-wMU" secondAttribute="bottom" constant="200" id="sYI-1s-r7z"/>
+                            <constraint firstItem="cmo-T9-wMU" firstAttribute="top" secondItem="ptI-6c-6zQ" secondAttribute="top" id="twf-Ge-bId"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Count" image="plus" catalog="system" id="PXH-9G-bJu"/>
                     <connections>
                         <outlet property="addButton" destination="YpD-Gn-yd8" id="eP7-YN-LFE"/>
-                        <outlet property="tableView" destination="Te1-3M-MdK" id="2LI-mB-Dr7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xKm-c5-Ai5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="855" y="-598"/>
+            <point key="canvasLocation" x="854.19847328244271" y="-598.59154929577471"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--View Controller-->
         <scene sceneID="mhX-Ge-PFv">
             <objects>
-                <tabBarController id="Vkc-C9-l9k" sceneMemberID="viewController">
+                <tabBarController id="Vkc-C9-l9k" customClass="ViewController" customModule="Spotter" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I0u-YO-zBQ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
