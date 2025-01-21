@@ -18,12 +18,10 @@ class LogTableView: UITableView {
 
 class LogEntryTableDataSource: NSObject, UITableViewDataSource {
 	let appDel = UIApplication.shared.delegate as! AppDelegate
-	let df = DateFormatter()
 	var entries: [LogEntry]?
 
 	override init() {
 		entries = appDel.fetchAllLogEntries()
-		df.dateFormat = "yyyy-MM-dd 'at' h:mm:ss a"
 	}
 	
 	func numberOfSections(in tableView: UITableView) -> Int {
@@ -39,7 +37,7 @@ class LogEntryTableDataSource: NSObject, UITableViewDataSource {
 		cell.textLabel?.lineBreakMode = .byWordWrapping
 		cell.textLabel?.numberOfLines = 3
 		
-		cell.textLabel?.text = entries![indexPath.row].string(df: df)
+		cell.textLabel?.text = entries![indexPath.row].string(df: appDel.displayDF)
 		return cell
 	}
 

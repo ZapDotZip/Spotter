@@ -23,11 +23,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBu-BM-b2C">
+                                <rect key="frame" x="125" y="717" width="143" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Refresh Display"/>
+                                <connections>
+                                    <action selector="refreshDisplay:" destination="iX3-kO-ecp" eventType="touchUpInside" id="xlO-bf-qYc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NY4-sr-org"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="gji-JT-KSn" firstAttribute="leading" secondItem="NY4-sr-org" secondAttribute="leading" id="DSS-Tc-x8t"/>
+                            <constraint firstItem="NY4-sr-org" firstAttribute="bottom" secondItem="pBu-BM-b2C" secondAttribute="bottom" constant="17" id="fVI-bA-Mcl"/>
+                            <constraint firstItem="pBu-BM-b2C" firstAttribute="centerX" secondItem="NY4-sr-org" secondAttribute="centerX" id="l9c-5Z-0cW"/>
                             <constraint firstItem="NY4-sr-org" firstAttribute="trailing" secondItem="gji-JT-KSn" secondAttribute="trailing" id="nLo-MJ-E8p"/>
                             <constraint firstItem="gji-JT-KSn" firstAttribute="top" secondItem="naz-1X-Do8" secondAttribute="top" id="t8G-0x-HMd"/>
                             <constraint firstItem="NY4-sr-org" firstAttribute="bottom" secondItem="gji-JT-KSn" secondAttribute="bottom" id="xKV-Cn-zmz"/>

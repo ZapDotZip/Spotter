@@ -9,10 +9,12 @@ import CoreData
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 	var viewCon: ViewController!
+	var displayDF = DateFormatter()
 	
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
 		fetchReq.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+		displayDF.dateFormat = "yyyy-MM-dd 'at' h:mm:ss a"
 		return true
 	}
 	
@@ -103,5 +105,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension LogEntry {
 	func string(df: DateFormatter) -> String {
 		return df.string(from: date!) + " at " + String(format: "%.5f", lat) + ", " + String(format: "%.5f", lon)
+	}
+	
+	func dateString(df: DateFormatter) -> String {
+		return df.string(from: date!)
 	}
 }
