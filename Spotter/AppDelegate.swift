@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		fetchSessions.sortDescriptors = [NSSortDescriptor(key: "startTime", ascending: true)]
 		displayDF.dateFormat = "yyyy-MM-dd 'at' h:mm:ss a"
 		briefDF.dateFormat = "EEE, MMM d, h:mm a"
+		_ = SessionManager.shared
 		return true
 	}
 	

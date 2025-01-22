@@ -8,6 +8,6 @@
     <entity name="Session" representedClassName="Session" syncable="YES" codeGenerationType="class">
         <attribute name="endTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="startTime" attributeType="Date" usesScalarValueType="NO"/>
-        <relationship name="entries" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LogEntry"/>
+        <relationship name="logEntries" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="LogEntry"/>
     </entity>
 </model>

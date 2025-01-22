@@ -41,7 +41,7 @@ class SessionTableDataSource: NSObject, UITableViewDataSource {
 		
 		
 		cell.textLabel?.text = entries![indexPath.row].string(df: appDel.briefDF, dcf: dcf)
-		cell.detailTextLabel?.text = "\(entries?[indexPath.row].entries?.count ?? 0)"
+		cell.detailTextLabel?.text = "\(entries?[indexPath.row].logEntries?.count ?? 0)"
 		return cell
 	}
 	
