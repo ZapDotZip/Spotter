@@ -23,6 +23,7 @@ class SessionTableDataSource: NSObject, UITableViewDataSource {
 
 	override init() {
 		entries = appDel.fetchAllSessions()
+		dcf.unitsStyle = .abbreviated
 	}
 	
 	func numberOfSections(in tableView: UITableView) -> Int {
@@ -34,11 +35,13 @@ class SessionTableDataSource: NSObject, UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "tableCell")!
+		let cell = tableView.dequeueReusableCell(withIdentifier: "sessionTableCell")!
 		cell.textLabel?.lineBreakMode = .byWordWrapping
 		cell.textLabel?.numberOfLines = 3
 		
+		
 		cell.textLabel?.text = entries![indexPath.row].string(df: appDel.briefDF, dcf: dcf)
+		cell.detailTextLabel?.text = "\(entries?[indexPath.row].entries?.count ?? 0)"
 		return cell
 	}
 	

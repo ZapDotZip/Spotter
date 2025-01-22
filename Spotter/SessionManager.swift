@@ -11,9 +11,9 @@ class SessionManager {
 	
 	public static let shared = SessionManager()
 	private init() {
-		if let lastSessionTime = UserDefaults.standard.set(session!.startTime, forKey: "LastSessionStartTime") as? Date {
-			context.persistentStoreCoordinator.persis
-		}
+//		if let lastSessionTime = UserDefaults.standard.set(session!.startTime, forKey: "LastSessionStartTime") as? Date {
+//			context.persistentStoreCoordinator.persis
+//		}
 	}
 	
 	private var session: Session?
@@ -21,7 +21,7 @@ class SessionManager {
 	func startNewSession() {
 		endSession()
 		initSession()
-		UserDefaults.standard.set(session!.objectID, forKey: "ActiveSessionBookmark")
+//		UserDefaults.standard.set(session!.objectID, forKey: "ActiveSessionBookmark")
 	}
 	
 	private func initSession() {
