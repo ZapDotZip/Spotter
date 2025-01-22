@@ -10,11 +10,14 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 	var viewCon: ViewController!
 	var displayDF = DateFormatter()
-	
+	var briefDF = DateFormatter()
+
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
-		fetchReq.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+		fetchLogEntries.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+		fetchSessions.sortDescriptors = [NSSortDescriptor(key: "startTime", ascending: true)]
 		displayDF.dateFormat = "yyyy-MM-dd 'at' h:mm:ss a"
+		briefDF.dateFormat = "EEE, MMM d, h:mm a"
 		return true
 	}
 	
@@ -69,18 +72,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		return container
 	}()
 	
-	let fetchReq = NSFetchRequest<NSManagedObject>(entityName: "LogEntry")
-	
+	let fetchLogEntries = NSFetchRequest<NSManagedObject>(entityName: "LogEntry")
+	let fetchSessions = NSFetchRequest<NSManagedObject>(entityName: "Session")
+
 	func fetchAllLogEntries() -> [LogEntry]? {
 		do {
-			if let entries = try persistentContainer.viewContext.fetch(fetchReq) as? [LogEntry] {
+			if let entries = try persistentContainer.viewContext.fetch(fetchLogEntries) as? [LogEntry] {
 				return entries
 			}
 		} catch {
 			NSLog("Failed to fetch entries from Core Data: \(error)")
 			viewCon.alert(title: "Failed to fetch data", msg: "Unable to fetch log entries from the database.", style: .alert)
 		}
-		
+		return nil
+	}
+	
+	func fetchAllSessions() -> [Session]? {
+		do {
+			if let entries = try persistentContainer.viewContext.fetch(fetchSessions) as? [Session] {
+				return entries
+			}
+		} catch {
+			NSLog("Failed to fetch entries from Core Data: \(error)")
+			viewCon.alert(title: "Failed to fetch data", msg: "Unable to fetch log entries from the database.", style: .alert)
+		}
 		return nil
 	}
 	
@@ -91,6 +106,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		if persistentContainer.viewContext.hasChanges {
 			do {
 				try persistentContainer.viewContext.save()
+				NSLog("Saved Core Data.")
 			} catch {
 				// Replace this implementation with code to handle the error appropriately.
 				// fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
@@ -109,5 +125,19 @@ extension LogEntry {
 	
 	func dateString(df: DateFormatter) -> String {
 		return df.string(from: date!)
+	}
+}
+
+extension Session {
+	func duration() -> TimeInterval {
+		return startTime!.distance(to: endTime ?? Date.init())
+	}
+	
+	func string(_ dcf: DateComponentsFormatter) -> String {
+		return dcf.string(from: duration()) ?? startTime!.description
+	}
+	
+	func string(df: DateFormatter, dcf: DateComponentsFormatter) -> String {
+		return "\(df.string(from: startTime!)), lasting \(dcf.string(from: duration()) ?? "unkown")"
 	}
 }

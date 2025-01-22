@@ -6,8 +6,6 @@
 import UIKit
 
 class CountViewCon: UIViewController {
-	let appDel = UIApplication.shared.delegate as! AppDelegate
-	lazy var context = appDel.persistentContainer.viewContext
 	
 	@IBOutlet weak var addButton: UIButton!
 	@IBOutlet weak var tableView: UITableView!
@@ -17,16 +15,7 @@ class CountViewCon: UIViewController {
 	}
 	
 	@IBAction func addButtonPressed(_ sender: UIButton) {
-		print("add button pressed")
-		let new = LogEntry(context: context)
-		new.date = Date.init()
-		if let loc = LocationController.shared.locationManager.location {
-			new.lat = loc.coordinate.latitude
-			new.lon = loc.coordinate.longitude
-		}
-		
-		dump(new)
-		
+		SessionManager.shared.recordEntry()
 	}
 	
 	
