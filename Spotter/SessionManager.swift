@@ -19,6 +19,7 @@ class SessionManager {
 					if s.endTime == nil {
 						if s.logEntries?.count != 0 {
 							s.endTime = (s.logEntries?.lastObject as? LogEntry)?.date
+							s.recalculateAverage()
 						} else {
 							NSLog("Session \(s.description) did not have any entries so it will be removed from the database.")
 							appDel.persistentContainer.viewContext.delete(s)
@@ -31,23 +32,27 @@ class SessionManager {
 		}
 	}
 	
-	private var session: Session?
+	var session: Session?
 	
-	func startNewSession() {
+	@discardableResult
+	func startNewSession() -> Session {
 		endSession()
-		initSession()
+		return initSession()
 	}
 	
-	private func initSession() {
+	@discardableResult
+	private func initSession() -> Session {
 		session = Session(context: context)
 		session!.startTime = Date.init()
 		appDel.saveContext()
 		UserDefaults.standard.set(session!.objectID.uriRepresentation().absoluteString, forKey: bookmarkKey)
+		return session!
 	}
 	
 	func endSession() {
 		if let s = session {
 			s.endTime = Date.init()
+			s.recalculateAverage()
 			appDel.saveContext()
 			UserDefaults.standard.removeObject(forKey: bookmarkKey)
 		}

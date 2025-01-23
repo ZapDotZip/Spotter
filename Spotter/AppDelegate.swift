@@ -141,4 +141,11 @@ extension Session {
 	func string(df: DateFormatter, dcf: DateComponentsFormatter) -> String {
 		return "\(df.string(from: startTime!)), lasting \(dcf.string(from: duration()) ?? "unkown")"
 	}
+	
+	@discardableResult
+	func recalculateAverage() -> Double {
+		let duration = startTime!.distance(to: endTime ?? Date.init())
+		avgPerMinuite = ((Double(logEntries?.count ?? 0)) / duration) * 60
+		return avgPerMinuite
+	}
 }

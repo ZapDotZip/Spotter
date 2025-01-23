@@ -12,17 +12,19 @@ class SessionTableView: UITableView {
 	required init?(coder: NSCoder) {
 		super.init(coder: coder)
 		self.dataSource = ds
+		ds.tableView = self
 	}
 	
 }
 
 class SessionTableDataSource: NSObject, UITableViewDataSource {
-	let appDel = UIApplication.shared.delegate as! AppDelegate
-	var entries: [Session]?
+	private let appDel = UIApplication.shared.delegate as! AppDelegate
+	var entries: [Session] = []
 	let dcf = DateComponentsFormatter()
+	var tableView: UITableView!
 
 	override init() {
-		entries = appDel.fetchAllSessions()
+		entries = appDel.fetchAllSessions() ?? []
 		dcf.unitsStyle = .abbreviated
 	}
 	
@@ -31,7 +33,7 @@ class SessionTableDataSource: NSObject, UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return entries?.count ?? 0
+		return entries.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -40,8 +42,9 @@ class SessionTableDataSource: NSObject, UITableViewDataSource {
 		cell.textLabel?.numberOfLines = 3
 		
 		
-		cell.textLabel?.text = entries![indexPath.row].string(df: appDel.briefDF, dcf: dcf)
-		cell.detailTextLabel?.text = "\(entries?[indexPath.row].logEntries?.count ?? 0)"
+		cell.textLabel?.text = entries[indexPath.row].string(df: appDel.briefDF, dcf: dcf)
+//		cell.detailTextLabel?.text = "\(entries?[indexPath.row].logEntries?.count ?? 0)"
+		cell.detailTextLabel?.text = "\(String(format: "%.2f", entries[indexPath.row].avgPerMinuite))/min"
 		return cell
 	}
 	
@@ -51,10 +54,16 @@ class SessionTableDataSource: NSObject, UITableViewDataSource {
 	
 	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 		if editingStyle == .delete {
-			appDel.persistentContainer.viewContext.delete(entries![indexPath.row])
-			entries?.remove(at: indexPath.row)
-			tableView.reloadData()
+			appDel.persistentContainer.viewContext.delete(entries[indexPath.row])
+			entries.remove(at: indexPath.row)
+			tableView.deleteRows(at: [indexPath], with: .automatic)
 		}
 	}
-
+	
+	
+	func appendSession(_ session: Session) {
+		entries.append(session)
+		tableView.insertRows(at: [IndexPath.init(row: entries.count - 1, section: 0)], with: .automatic)
+	}
+	
 }
