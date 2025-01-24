@@ -44,7 +44,7 @@ class SessionManager {
 	private func initSession() -> Session {
 		session = Session(context: context)
 		session!.startTime = Date.init()
-		appDel.saveContext()
+		appDel.save(now: true)
 		UserDefaults.standard.set(session!.objectID.uriRepresentation().absoluteString, forKey: bookmarkKey)
 		return session!
 	}
@@ -53,7 +53,7 @@ class SessionManager {
 		if let s = session {
 			s.endTime = Date.init()
 			s.recalculateAverage()
-			appDel.saveContext()
+			appDel.save(now: false)
 			UserDefaults.standard.removeObject(forKey: bookmarkKey)
 		}
 	}
@@ -70,7 +70,7 @@ class SessionManager {
 			new.lon = loc.coordinate.longitude
 		}
 		session!.addToLogEntries(new)
-		dump(session)
+		appDel.save(now: false)
 	}
 	
 }

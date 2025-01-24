@@ -103,7 +103,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	
 	// MARK: - Core Data Saving support
 	
-	func saveContext () {
+	@objc private func saveContext() {
 		if persistentContainer.viewContext.hasChanges {
 			do {
 				try persistentContainer.viewContext.save()
@@ -113,6 +113,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 				// fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
 				let nserror = error as NSError
 				fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+			}
+		}
+	}
+
+	var timer: Timer?
+	func save(now: Bool) {
+		if now {
+			timer?.invalidate()
+			saveContext()
+		} else {
+			if timer == nil || timer?.timeInterval ?? 0 < 3 {
+				timer = Timer.scheduledTimer(timeInterval: 25, target: self, selector: #selector(saveContext), userInfo: nil, repeats: false)
 			}
 		}
 	}
