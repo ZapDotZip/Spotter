@@ -10,8 +10,11 @@ class CountViewCon: UIViewController {
 	@IBOutlet weak var addButton: UIButton!
 	@IBOutlet weak var tableView: SessionTableView!
 	
+	private let df = DateFormatter()
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		df.dateFormat = "h:mm a"
 	}
 	
 	@IBAction func addButtonPressed(_ sender: UIButton) {
@@ -24,7 +27,9 @@ class CountViewCon: UIViewController {
 	@IBOutlet weak var startSessionButton: UIButton!
 	@IBAction func startSessionButtonPressed(_ sender: UIButton) {
 		endSessionButton.isEnabled = true
-		tableView.ds.appendSession(SessionManager.shared.startNewSession())
+		let newSession: Session = SessionManager.shared.startNewSession()
+		tableView.ds.appendSession(newSession)
+		startSessionButton.setTitle("Started \(newSession.string(df: df))...", for: .normal)
 	}
 	
 	
@@ -32,6 +37,8 @@ class CountViewCon: UIViewController {
 	@IBAction func endSessionButtonPressed(_ sender: UIButton) {
 		SessionManager.shared.endSession()
 		endSessionButton.isEnabled = false
+		rateLabel.text = "0.0/min"
+		startSessionButton.setTitle("Start New Session", for: .normal)
 	}
 	
 	@IBOutlet weak var rateLabel: UILabel!

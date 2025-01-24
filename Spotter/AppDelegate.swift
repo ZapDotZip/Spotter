@@ -146,12 +146,27 @@ extension Session {
 		return startTime!.distance(to: endTime ?? Date.init())
 	}
 	
+	/// Returns duration as a string
+	/// - Parameter dcf: The format to use for the duration.
+	/// - Returns: The formatted string.
 	func string(_ dcf: DateComponentsFormatter) -> String {
-		return dcf.string(from: duration()) ?? startTime!.description
+		return dcf.string(from: duration()) ?? "Unknown duration"
 	}
 	
+	/// Returns a string containing the start time and duration.
+	/// - Parameters:
+	///   - df: The format for the start time.
+	///   - dcf: The format for the duration.
+	/// - Returns: The formatted string.
 	func string(df: DateFormatter, dcf: DateComponentsFormatter) -> String {
 		return "\(df.string(from: startTime!)), lasting \(dcf.string(from: duration()) ?? "unkown")"
+	}
+	
+	/// Returns a string containing the start time.
+	/// - Parameter df: The format for the start time.
+	/// - Returns: The formatted string.
+	func string(df: DateFormatter) -> String {
+		return df.string(from: startTime!)
 	}
 	
 	@discardableResult
