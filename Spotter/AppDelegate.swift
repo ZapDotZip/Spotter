@@ -74,8 +74,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}()
 	
 	let fetchLogEntries = NSFetchRequest<NSManagedObject>(entityName: "LogEntry")
-	let fetchSessions = NSFetchRequest<NSManagedObject>(entityName: "Session")
-
 	func fetchAllLogEntries() -> [LogEntry]? {
 		do {
 			if let entries = try persistentContainer.viewContext.fetch(fetchLogEntries) as? [LogEntry] {
@@ -88,6 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		return nil
 	}
 	
+	let fetchSessions = NSFetchRequest<NSManagedObject>(entityName: "Session")
 	func fetchAllSessions() -> [Session]? {
 		do {
 			if let entries = try persistentContainer.viewContext.fetch(fetchSessions) as? [Session] {
@@ -118,6 +117,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	}
 
 	var timer: Timer?
+	/// Saves the Core Data DB now or after a timer elapses.
+	/// - Parameter now: Saves data now if set to true, or sets a timer to wait for additional changes.
 	func save(now: Bool) {
 		if now {
 			timer?.invalidate()

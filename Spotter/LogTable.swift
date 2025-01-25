@@ -1,5 +1,5 @@
 //
-//  LogTableView.swift
+//  LogTable.swift
 //  Spotter
 //
 

@@ -7,9 +7,9 @@ import UIKit
 import CoreLocation
 
 class LocationController: NSObject, CLLocationManagerDelegate {
-	static let shared = LocationController()
 	let locationManager = CLLocationManager()
 	
+	static let shared = LocationController()
 	private override init() {
 		super.init()
 		locationManager.delegate = self

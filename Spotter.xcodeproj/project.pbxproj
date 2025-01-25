@@ -17,10 +17,10 @@
 		ED4CFD5D2D28A5E000C96700 /* CountViewCon.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4CFD5C2D28A5E000C96700 /* CountViewCon.swift */; };
 		ED4CFD5F2D28A61900C96700 /* MapViewCon.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4CFD5E2D28A61900C96700 /* MapViewCon.swift */; };
 		ED4CFD612D2A02C600C96700 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4CFD602D2A02C600C96700 /* LocationController.swift */; };
-		EDBFD9972D3AE12A0087426F /* LogTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBFD9962D3AE12A0087426F /* LogTableView.swift */; };
+		EDBFD9972D3AE12A0087426F /* LogTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBFD9962D3AE12A0087426F /* LogTable.swift */; };
 		EDBFD9C32D4056D90087426F /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBFD9C22D4056D90087426F /* Settings.storyboard */; };
 		EDBFD9C52D406B740087426F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBFD9C42D406B740087426F /* SessionManager.swift */; };
-		EDBFD9C72D4083380087426F /* SessionTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBFD9C62D4083380087426F /* SessionTableView.swift */; };
+		EDBFD9C72D4083380087426F /* SessionTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBFD9C62D4083380087426F /* SessionTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,10 +55,10 @@
 		ED4CFD5C2D28A5E000C96700 /* CountViewCon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountViewCon.swift; sourceTree = "<group>"; };
 		ED4CFD5E2D28A61900C96700 /* MapViewCon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCon.swift; sourceTree = "<group>"; };
 		ED4CFD602D2A02C600C96700 /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
-		EDBFD9962D3AE12A0087426F /* LogTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTableView.swift; sourceTree = "<group>"; };
+		EDBFD9962D3AE12A0087426F /* LogTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTable.swift; sourceTree = "<group>"; };
 		EDBFD9C22D4056D90087426F /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		EDBFD9C42D406B740087426F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
-		EDBFD9C62D4083380087426F /* SessionTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTableView.swift; sourceTree = "<group>"; };
+		EDBFD9C62D4083380087426F /* SessionTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -126,9 +126,9 @@
 				ED4CFD4D2D28A1C900C96700 /* SceneDelegate.swift */,
 				ED4CFD4F2D28A1C900C96700 /* ViewController.swift */,
 				ED4CFD5C2D28A5E000C96700 /* CountViewCon.swift */,
-				EDBFD9962D3AE12A0087426F /* LogTableView.swift */,
+				EDBFD9962D3AE12A0087426F /* LogTable.swift */,
 				EDBFD9C42D406B740087426F /* SessionManager.swift */,
-				EDBFD9C62D4083380087426F /* SessionTableView.swift */,
+				EDBFD9C62D4083380087426F /* SessionTable.swift */,
 				ED4CFD602D2A02C600C96700 /* LocationController.swift */,
 				ED4CFD5E2D28A61900C96700 /* MapViewCon.swift */,
 				ED4CFD4C2D28A1C900C96700 /* Main.storyboard */,
@@ -289,10 +289,10 @@
 				ED4CFD522D28A1C900C96700 /* AppDelegate.swift in Sources */,
 				ED4CFD532D28A1C900C96700 /* SceneDelegate.swift in Sources */,
 				EDBFD9C52D406B740087426F /* SessionManager.swift in Sources */,
-				EDBFD9972D3AE12A0087426F /* LogTableView.swift in Sources */,
+				EDBFD9972D3AE12A0087426F /* LogTable.swift in Sources */,
 				ED4CFD5F2D28A61900C96700 /* MapViewCon.swift in Sources */,
 				ED4CFD5D2D28A5E000C96700 /* CountViewCon.swift in Sources */,
-				EDBFD9C72D4083380087426F /* SessionTableView.swift in Sources */,
+				EDBFD9C72D4083380087426F /* SessionTable.swift in Sources */,
 				ED4CFD542D28A1C900C96700 /* Spotter.xcdatamodeld in Sources */,
 				ED4CFD552D28A1C900C96700 /* ViewController.swift in Sources */,
 				ED4CFD612D2A02C600C96700 /* LocationController.swift in Sources */,
