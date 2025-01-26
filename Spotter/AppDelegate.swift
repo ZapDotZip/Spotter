@@ -8,15 +8,18 @@ import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-	var viewCon: ViewController!
-	var displayDF = DateFormatter()
+	var viewCon: TabViewController!
+	var dfFullDate = DateFormatter()
+	var dfTimeOnly = DateFormatter()
 	var briefDF = DateFormatter()
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
 		fetchLogEntries.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
 		fetchSessions.sortDescriptors = [NSSortDescriptor(key: "startTime", ascending: true)]
-		displayDF.dateFormat = "yyyy-MM-dd 'at' h:mm:ss a"
+		dfFullDate.dateFormat = "yyyy-MM-dd 'at' h:mm:ss a"
+		dfTimeOnly.dateStyle = .none
+		dfTimeOnly.timeStyle = .medium
 		briefDF.dateFormat = "EEE, MMM d, h:mm a"
 		_ = SessionManager.shared
 		return true

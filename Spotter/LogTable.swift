@@ -37,7 +37,7 @@ class LogEntryTableDataSource: NSObject, UITableViewDataSource {
 		cell.textLabel?.lineBreakMode = .byWordWrapping
 		cell.textLabel?.numberOfLines = 3
 		
-		cell.textLabel?.text = entries![indexPath.row].string(df: appDel.displayDF)
+		cell.textLabel?.text = entries![indexPath.row].string(df: appDel.dfFullDate)
 		return cell
 	}
 

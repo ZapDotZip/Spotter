@@ -24,9 +24,9 @@
                                 <standardMapConfiguration key="preferredConfiguration"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBu-BM-b2C">
-                                <rect key="frame" x="125" y="717" width="143" height="35"/>
+                                <rect key="frame" x="126" y="717" width="141" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Refresh Display"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Show All Points"/>
                                 <connections>
                                     <action selector="refreshDisplay:" destination="iX3-kO-ecp" eventType="touchUpInside" id="xlO-bf-qYc"/>
                                 </connections>
@@ -46,6 +46,7 @@
                     <tabBarItem key="tabBarItem" title="Map" image="map" catalog="system" id="kVA-u6-yN7"/>
                     <connections>
                         <outlet property="mapView" destination="gji-JT-KSn" id="zRd-Ce-eeO"/>
+                        <outlet property="refreshDisplayButton" destination="pBu-BM-b2C" id="05l-5u-M4J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X4R-dr-Zqy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -192,10 +193,10 @@
             </objects>
             <point key="canvasLocation" x="1404" y="-854"/>
         </scene>
-        <!--View Controller-->
+        <!--Tab View Controller-->
         <scene sceneID="mhX-Ge-PFv">
             <objects>
-                <tabBarController id="Vkc-C9-l9k" customClass="ViewController" customModule="Spotter" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="Vkc-C9-l9k" customClass="TabViewController" customModule="Spotter" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="I0u-YO-zBQ">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

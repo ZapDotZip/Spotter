@@ -10,7 +10,7 @@
 		ED4CFD522D28A1C900C96700 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4CFD462D28A1C900C96700 /* AppDelegate.swift */; };
 		ED4CFD532D28A1C900C96700 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4CFD4D2D28A1C900C96700 /* SceneDelegate.swift */; };
 		ED4CFD542D28A1C900C96700 /* Spotter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ED4CFD4E2D28A1C900C96700 /* Spotter.xcdatamodeld */; };
-		ED4CFD552D28A1C900C96700 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4CFD4F2D28A1C900C96700 /* ViewController.swift */; };
+		ED4CFD552D28A1C900C96700 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4CFD4F2D28A1C900C96700 /* TabViewController.swift */; };
 		ED4CFD562D28A1C900C96700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED4CFD472D28A1C900C96700 /* Assets.xcassets */; };
 		ED4CFD582D28A1C900C96700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4CFD4A2D28A1C900C96700 /* LaunchScreen.storyboard */; };
 		ED4CFD592D28A1C900C96700 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4CFD4C2D28A1C900C96700 /* Main.storyboard */; };
@@ -21,6 +21,7 @@
 		EDBFD9C32D4056D90087426F /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBFD9C22D4056D90087426F /* Settings.storyboard */; };
 		EDBFD9C52D406B740087426F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBFD9C42D406B740087426F /* SessionManager.swift */; };
 		EDBFD9C72D4083380087426F /* SessionTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBFD9C62D4083380087426F /* SessionTable.swift */; };
+		EDBFD9C92D45A0540087426F /* CustomMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBFD9C82D45A0540087426F /* CustomMapViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +51,7 @@
 		ED4CFD492D28A1C900C96700 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED4CFD4B2D28A1C900C96700 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED4CFD4D2D28A1C900C96700 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ED4CFD4F2D28A1C900C96700 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ED4CFD4F2D28A1C900C96700 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		ED4CFD512D28A1C900C96700 /* Spotter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Spotter.xcdatamodel; sourceTree = "<group>"; };
 		ED4CFD5C2D28A5E000C96700 /* CountViewCon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountViewCon.swift; sourceTree = "<group>"; };
 		ED4CFD5E2D28A61900C96700 /* MapViewCon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCon.swift; sourceTree = "<group>"; };
@@ -59,6 +60,7 @@
 		EDBFD9C22D4056D90087426F /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		EDBFD9C42D406B740087426F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		EDBFD9C62D4083380087426F /* SessionTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTable.swift; sourceTree = "<group>"; };
+		EDBFD9C82D45A0540087426F /* CustomMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -124,13 +126,14 @@
 			children = (
 				ED4CFD462D28A1C900C96700 /* AppDelegate.swift */,
 				ED4CFD4D2D28A1C900C96700 /* SceneDelegate.swift */,
-				ED4CFD4F2D28A1C900C96700 /* ViewController.swift */,
+				ED4CFD4F2D28A1C900C96700 /* TabViewController.swift */,
 				ED4CFD5C2D28A5E000C96700 /* CountViewCon.swift */,
 				EDBFD9962D3AE12A0087426F /* LogTable.swift */,
 				EDBFD9C42D406B740087426F /* SessionManager.swift */,
 				EDBFD9C62D4083380087426F /* SessionTable.swift */,
 				ED4CFD602D2A02C600C96700 /* LocationController.swift */,
 				ED4CFD5E2D28A61900C96700 /* MapViewCon.swift */,
+				EDBFD9C82D45A0540087426F /* CustomMapViewDelegate.swift */,
 				ED4CFD4C2D28A1C900C96700 /* Main.storyboard */,
 				EDBFD9C22D4056D90087426F /* Settings.storyboard */,
 				ED4CFD4A2D28A1C900C96700 /* LaunchScreen.storyboard */,
@@ -288,13 +291,14 @@
 			files = (
 				ED4CFD522D28A1C900C96700 /* AppDelegate.swift in Sources */,
 				ED4CFD532D28A1C900C96700 /* SceneDelegate.swift in Sources */,
+				EDBFD9C92D45A0540087426F /* CustomMapViewDelegate.swift in Sources */,
 				EDBFD9C52D406B740087426F /* SessionManager.swift in Sources */,
 				EDBFD9972D3AE12A0087426F /* LogTable.swift in Sources */,
 				ED4CFD5F2D28A61900C96700 /* MapViewCon.swift in Sources */,
 				ED4CFD5D2D28A5E000C96700 /* CountViewCon.swift in Sources */,
 				EDBFD9C72D4083380087426F /* SessionTable.swift in Sources */,
 				ED4CFD542D28A1C900C96700 /* Spotter.xcdatamodeld in Sources */,
-				ED4CFD552D28A1C900C96700 /* ViewController.swift in Sources */,
+				ED4CFD552D28A1C900C96700 /* TabViewController.swift in Sources */,
 				ED4CFD612D2A02C600C96700 /* LocationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

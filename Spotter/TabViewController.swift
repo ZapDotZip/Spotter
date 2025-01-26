@@ -1,11 +1,11 @@
 //
-//  ViewController.swift
+//  TabViewController.swift
 //  Spotter
 //
 
 import UIKit
 
-class ViewController: UITabBarController {
+class TabViewController: UITabBarController {
 	let appDel = UIApplication.shared.delegate as! AppDelegate
 	
 	override func viewDidLoad() {
@@ -20,6 +20,13 @@ class ViewController: UITabBarController {
 		alert.addAction(ok)
 		self.present(alert, animated: true)
 	}
+	
+	func switchToMapsView(display s: Session) {
+		self.selectedIndex = 1
+		if let mvc = self.selectedViewController as? MapViewCon { mvc.showEntries(from: s)
+		}
+	}
+	
 	
 	
 }

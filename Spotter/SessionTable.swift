@@ -12,12 +12,13 @@ class SessionTableView: UITableView {
 	required init?(coder: NSCoder) {
 		super.init(coder: coder)
 		self.dataSource = ds
+		self.delegate = ds
 		ds.tableView = self
 	}
 	
 }
 
-class SessionTableDataSource: NSObject, UITableViewDataSource {
+class SessionTableDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
 	private let appDel = UIApplication.shared.delegate as! AppDelegate
 	var entries: [Session] = []
 	let dcf = DateComponentsFormatter()
@@ -61,6 +62,9 @@ class SessionTableDataSource: NSObject, UITableViewDataSource {
 		}
 	}
 	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		appDel.viewCon.switchToMapsView(display: entries[indexPath.row])
+	}
 	
 	func appendSession(_ session: Session) {
 		entries.append(session)
