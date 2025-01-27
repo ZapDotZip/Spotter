@@ -22,6 +22,8 @@
 		EDBFD9C52D406B740087426F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBFD9C42D406B740087426F /* SessionManager.swift */; };
 		EDBFD9C72D4083380087426F /* SessionTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBFD9C62D4083380087426F /* SessionTable.swift */; };
 		EDBFD9C92D45A0540087426F /* CustomMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBFD9C82D45A0540087426F /* CustomMapViewDelegate.swift */; };
+		EDC7CABB2D46EA9F00E9038A /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC7CABA2D46EA9F00E9038A /* ChartView.swift */; };
+		EDC7CABD2D46F77B00E9038A /* LogEntryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC7CABC2D46F77B00E9038A /* LogEntryExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		EDBFD9C42D406B740087426F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
 		EDBFD9C62D4083380087426F /* SessionTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTable.swift; sourceTree = "<group>"; };
 		EDBFD9C82D45A0540087426F /* CustomMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapViewDelegate.swift; sourceTree = "<group>"; };
+		EDC7CABA2D46EA9F00E9038A /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		EDC7CABC2D46F77B00E9038A /* LogEntryExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntryExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -134,6 +138,8 @@
 				ED4CFD602D2A02C600C96700 /* LocationController.swift */,
 				ED4CFD5E2D28A61900C96700 /* MapViewCon.swift */,
 				EDBFD9C82D45A0540087426F /* CustomMapViewDelegate.swift */,
+				EDC7CABA2D46EA9F00E9038A /* ChartView.swift */,
+				EDC7CABC2D46F77B00E9038A /* LogEntryExtensions.swift */,
 				ED4CFD4C2D28A1C900C96700 /* Main.storyboard */,
 				EDBFD9C22D4056D90087426F /* Settings.storyboard */,
 				ED4CFD4A2D28A1C900C96700 /* LaunchScreen.storyboard */,
@@ -295,11 +301,13 @@
 				EDBFD9C52D406B740087426F /* SessionManager.swift in Sources */,
 				EDBFD9972D3AE12A0087426F /* LogTable.swift in Sources */,
 				ED4CFD5F2D28A61900C96700 /* MapViewCon.swift in Sources */,
+				EDC7CABD2D46F77B00E9038A /* LogEntryExtensions.swift in Sources */,
 				ED4CFD5D2D28A5E000C96700 /* CountViewCon.swift in Sources */,
 				EDBFD9C72D4083380087426F /* SessionTable.swift in Sources */,
 				ED4CFD542D28A1C900C96700 /* Spotter.xcdatamodeld in Sources */,
 				ED4CFD552D28A1C900C96700 /* TabViewController.swift in Sources */,
 				ED4CFD612D2A02C600C96700 /* LocationController.swift in Sources */,
+				EDC7CABB2D46EA9F00E9038A /* ChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,7 +377,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -400,7 +408,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

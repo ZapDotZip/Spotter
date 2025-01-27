@@ -205,14 +205,26 @@
                     <connections>
                         <segue destination="1V6-ai-25H" kind="relationship" relationship="viewControllers" id="5lh-gw-ETe"/>
                         <segue destination="iX3-kO-ecp" kind="relationship" relationship="viewControllers" id="dB2-s7-QZP"/>
+                        <segue destination="sNv-PK-1sf" kind="relationship" relationship="viewControllers" id="Jd8-OQ-hM4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p5a-hi-8tO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-434" y="-273"/>
         </scene>
+        <!--Charts-->
+        <scene sceneID="kOP-qR-2aE">
+            <objects>
+                <hostingController id="sNv-PK-1sf" customClass="ChartHostingController" customModule="Spotter" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Charts" image="chart.bar.xaxis" catalog="system" selectedImage="chart.bar.xaxis" id="iWH-N3-d2d"/>
+                </hostingController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lxr-hx-mVf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-434" y="523"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="chart.bar.xaxis" catalog="system" width="128" height="97"/>
         <image name="gear" catalog="system" width="128" height="122"/>
         <image name="map" catalog="system" width="128" height="112"/>
         <image name="plus" catalog="system" width="128" height="113"/>
