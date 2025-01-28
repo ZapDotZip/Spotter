@@ -10,6 +10,7 @@ class MapViewCon: UIViewController {
 	private let mvd = CustomMapViewDelegate()
 	
 	let appDel = UIApplication.shared.delegate as! AppDelegate
+	lazy var dbm = appDel.dbm!
 	@IBOutlet weak var mapView: MKMapView!
 	
 	override func viewDidLoad() {
@@ -39,7 +40,7 @@ class MapViewCon: UIViewController {
 	
 	@IBOutlet weak var refreshDisplayButton: UIButton!
 	@IBAction func refreshDisplay(_ sender: UIButton) {
-		if let entries = appDel.fetchAllLogEntries() {
+		if let entries = dbm.fetchAllLogEntries() {
 			displayPoints(gatherPoints(from: entries))
 		} else {
 			displayPoints([])

@@ -17,11 +17,14 @@ class LogTableView: UITableView {
 }
 
 class LogEntryTableDataSource: NSObject, UITableViewDataSource {
-	let appDel = UIApplication.shared.delegate as! AppDelegate
+	let appDel: AppDelegate
+	let dbm: DatabaseManager
 	var entries: [LogEntry]?
-
+	
 	override init() {
-		entries = appDel.fetchAllLogEntries()
+		appDel = UIApplication.shared.delegate as! AppDelegate
+		dbm = appDel.dbm
+		entries = dbm.fetchAllLogEntries()
 	}
 	
 	func numberOfSections(in tableView: UITableView) -> Int {
@@ -40,5 +43,5 @@ class LogEntryTableDataSource: NSObject, UITableViewDataSource {
 		cell.textLabel?.text = entries![indexPath.row].string(df: appDel.dfFullDate)
 		return cell
 	}
-
+	
 }

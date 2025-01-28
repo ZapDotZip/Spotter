@@ -8,7 +8,8 @@ import CoreData
 
 class SessionManager {
 	let appDel = UIApplication.shared.delegate as! AppDelegate
-	lazy var context = appDel.persistentContainer.viewContext
+	lazy var dbm: DatabaseManager = appDel.dbm
+	lazy var context = dbm.persistentContainer.viewContext
 	
 	let bookmarkKey = "ActiveSessionBookmark"
 	
@@ -22,7 +23,7 @@ class SessionManager {
 							s.recalculateAverage()
 						} else {
 							NSLog("Session \(s.description) did not have any entries so it will be removed from the database.")
-							appDel.persistentContainer.viewContext.delete(s)
+							context.delete(s)
 						}
 					}
 			} else {
@@ -44,7 +45,7 @@ class SessionManager {
 	private func initSession() -> Session {
 		session = Session(context: context)
 		session!.startTime = Date.init()
-		appDel.save(now: true)
+		dbm.save(now: true)
 		UserDefaults.standard.set(session!.objectID.uriRepresentation().absoluteString, forKey: bookmarkKey)
 		return session!
 	}
@@ -53,7 +54,7 @@ class SessionManager {
 		if let s = session {
 			s.endTime = Date.init()
 			s.recalculateAverage()
-			appDel.save(now: false)
+			dbm.save(now: false)
 			UserDefaults.standard.removeObject(forKey: bookmarkKey)
 		}
 	}
@@ -70,7 +71,7 @@ class SessionManager {
 			new.lon = loc.coordinate.longitude
 		}
 		session!.addToLogEntries(new)
-		appDel.save(now: false)
+		dbm.save(now: false)
 	}
 	
 }

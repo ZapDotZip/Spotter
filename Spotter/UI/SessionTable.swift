@@ -19,13 +19,16 @@ class SessionTableView: UITableView {
 }
 
 class SessionTableDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
-	private let appDel = UIApplication.shared.delegate as! AppDelegate
+	private let appDel: AppDelegate
+	private let dbm: DatabaseManager
 	var entries: [Session] = []
 	let dcf = DateComponentsFormatter()
 	var tableView: UITableView!
 
 	override init() {
-		entries = appDel.fetchAllSessions() ?? []
+		appDel = UIApplication.shared.delegate as! AppDelegate
+		dbm = appDel.dbm
+		entries = dbm.fetchAllSessions() ?? []
 		dcf.unitsStyle = .abbreviated
 	}
 	
@@ -55,8 +58,8 @@ class SessionTableDataSource: NSObject, UITableViewDataSource, UITableViewDelega
 	
 	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 		if editingStyle == .delete {
-			appDel.persistentContainer.viewContext.delete(entries[indexPath.row])
-			appDel.save(now: false)
+			dbm.persistentContainer.viewContext.delete(entries[indexPath.row])
+			dbm.save(now: false)
 			entries.remove(at: indexPath.row)
 			tableView.deleteRows(at: [indexPath], with: .automatic)
 		}

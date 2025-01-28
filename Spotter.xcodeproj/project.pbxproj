@@ -24,6 +24,7 @@
 		EDC7CACD2D4851E400E9038A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC7CAC52D4851E400E9038A /* SceneDelegate.swift */; };
 		EDC7CACE2D4851E400E9038A /* SessionTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC7CAC62D4851E400E9038A /* SessionTable.swift */; };
 		EDC7CACF2D4851E400E9038A /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC7CAC72D4851E400E9038A /* TabViewController.swift */; };
+		EDC7CAD12D48531300E9038A /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC7CAD02D48531300E9038A /* DatabaseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		EDC7CAC52D4851E400E9038A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EDC7CAC62D4851E400E9038A /* SessionTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTable.swift; sourceTree = "<group>"; };
 		EDC7CAC72D4851E400E9038A /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		EDC7CAD02D48531300E9038A /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -129,10 +131,10 @@
 			isa = PBXGroup;
 			children = (
 				ED4CFD462D28A1C900C96700 /* AppDelegate.swift */,
-				EDBFD9962D3AE12A0087426F /* LogTable.swift */,
+				EDC7CAD02D48531300E9038A /* DatabaseManager.swift */,
+				EDC7CABC2D46F77B00E9038A /* LogEntryExtensions.swift */,
 				EDBFD9C42D406B740087426F /* SessionManager.swift */,
 				ED4CFD602D2A02C600C96700 /* LocationController.swift */,
-				EDC7CABC2D46F77B00E9038A /* LogEntryExtensions.swift */,
 				EDC7CAC82D4851E400E9038A /* UI */,
 				ED4CFD4C2D28A1C900C96700 /* Main.storyboard */,
 				EDBFD9C22D4056D90087426F /* Settings.storyboard */,
@@ -150,9 +152,10 @@
 				EDC7CAC52D4851E400E9038A /* SceneDelegate.swift */,
 				EDC7CAC72D4851E400E9038A /* TabViewController.swift */,
 				EDC7CAC22D4851E400E9038A /* CountViewCon.swift */,
+				EDBFD9962D3AE12A0087426F /* LogTable.swift */,
+				EDC7CAC62D4851E400E9038A /* SessionTable.swift */,
 				EDC7CAC42D4851E400E9038A /* MapViewCon.swift */,
 				EDC7CAC32D4851E400E9038A /* CustomMapViewDelegate.swift */,
-				EDC7CAC62D4851E400E9038A /* SessionTable.swift */,
 				EDC7CAC12D4851E400E9038A /* ChartView.swift */,
 			);
 			path = UI;
@@ -315,6 +318,7 @@
 				EDBFD9972D3AE12A0087426F /* LogTable.swift in Sources */,
 				EDC7CABD2D46F77B00E9038A /* LogEntryExtensions.swift in Sources */,
 				ED4CFD542D28A1C900C96700 /* Spotter.xcdatamodeld in Sources */,
+				EDC7CAD12D48531300E9038A /* DatabaseManager.swift in Sources */,
 				ED4CFD612D2A02C600C96700 /* LocationController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
