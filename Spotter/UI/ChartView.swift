@@ -60,7 +60,7 @@ struct ChartView : View {
 			Chart {
 				ForEach(dataToY) { ToY in
 					BarMark(
-						x: .value("Time of Day", ToY.category),
+						x: .value("Time of Year", ToY.category),
 						y: .value("Total Count", ToY.count)
 					)
 				}
