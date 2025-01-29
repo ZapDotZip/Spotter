@@ -9,21 +9,20 @@ import CoreData
 class SessionManager {
 	let appDel = UIApplication.shared.delegate as! AppDelegate
 	lazy var dbm: DatabaseManager = appDel.dbm
-	lazy var context = dbm.persistentContainer.viewContext
 	
 	let bookmarkKey = "ActiveSessionBookmark"
 	
 	public static let shared = SessionManager()
 	private init() {
 		if let lastSessionBookmark = URL.init(string: UserDefaults.standard.string(forKey: bookmarkKey) ?? "") {
-			if let objID = context.persistentStoreCoordinator?.managedObjectID(forURIRepresentation: lastSessionBookmark), let s = context.object(with: objID) as? Session {
+			if let s = dbm.object(from: lastSessionBookmark) as? Session {
 					if s.endTime == nil {
 						if s.logEntries?.count != 0 {
 							s.endTime = (s.logEntries?.lastObject as? LogEntry)?.date
 							s.recalculateAverage()
 						} else {
 							NSLog("Session \(s.description) did not have any entries so it will be removed from the database.")
-							context.delete(s)
+							dbm.delete(s)
 						}
 					}
 			} else {
@@ -43,7 +42,7 @@ class SessionManager {
 	
 	@discardableResult
 	private func initSession() -> Session {
-		session = Session(context: context)
+		session = dbm.newSession()
 		session!.startTime = Date.init()
 		dbm.save(now: true)
 		UserDefaults.standard.set(session!.objectID.uriRepresentation().absoluteString, forKey: bookmarkKey)
@@ -54,7 +53,7 @@ class SessionManager {
 		if let s = session {
 			s.endTime = Date.init()
 			s.recalculateAverage()
-			dbm.save(now: false)
+			dbm.save(now: true)
 			UserDefaults.standard.removeObject(forKey: bookmarkKey)
 		}
 	}
@@ -64,7 +63,7 @@ class SessionManager {
 			initSession()
 		}
 		
-		let new = LogEntry(context: context)
+		let new = dbm.newLogEntry()
 		new.date = Date.init()
 		if let loc = LocationController.shared.locationManager.location {
 			new.lat = loc.coordinate.latitude

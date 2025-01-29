@@ -7,20 +7,18 @@ import CoreData
 
 class DatabaseManager {
 	let appDel: AppDelegate
-	let fetchLogEntries = NSFetchRequest<NSManagedObject>(entityName: "LogEntry")
-	let fetchSessions = NSFetchRequest<NSManagedObject>(entityName: "Session")
-	
-	let dq: DispatchQueue
-	
-	var persistentContainer: NSPersistentContainer
+	let fetchLogEntries = NSFetchRequest<LogEntry>(entityName: "LogEntry")
+	let fetchSessions = NSFetchRequest<Session>(entityName: "Session")
+		
+	private var persistentContainer: NSPersistentContainer
+	var context: NSManagedObjectContext
+	var bgContext: NSManagedObjectContext
 	init(_ ad: AppDelegate) {
 		appDel = ad
 		persistentContainer = {
 			let container = NSPersistentContainer(name: "Spotter")
 			container.loadPersistentStores(completionHandler: { (storeDescription, error) in
 				if let error = error as NSError? {
-					// Replace this implementation with code to handle the error appropriately.
-					// fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
 					/*
 					 Typical reasons for an error here include:
 					 * The parent directory does not exist, cannot be created, or disallows writing.
@@ -29,22 +27,46 @@ class DatabaseManager {
 					 * The store could not be migrated to the current model version.
 					 Check the error message to determine what the actual problem was.
 					 */
-					fatalError("Unresolved error \(error), \(error.userInfo)")
+					NSLog("Error opening database: \(error)")
+					ad.viewCon.alert(title: "An error occured trying to load the database.", msg: "The database may be corrupted.\nError: \(error.localizedDescription)", style: .alert)
+//					fatalError("Unresolved error \(error), \(error.userInfo)")
 				}
 			})
 			return container
 		}()
+		
+		context = persistentContainer.viewContext
+		bgContext = persistentContainer.newBackgroundContext()
+		bgContext.automaticallyMergesChangesFromParent = true
+		
 		fetchLogEntries.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
 		fetchSessions.sortDescriptors = [NSSortDescriptor(key: "startTime", ascending: true)]
-		
-		dq = DispatchQueue(label: "CoreData", qos: .utility)
 	}
+		
+	func object(from url: URL) -> NSManagedObject? {
+		if let objID = bgContext.persistentStoreCoordinator?.managedObjectID(forURIRepresentation: url) {
+			return bgContext.object(with: objID)
+		} else {
+			return nil
+		}
+	}
+	
+	func newSession() -> Session {
+		return Session(context: context)
+	}
+	
+	func newLogEntry() -> LogEntry {
+		LogEntry(context: context)
+	}
+	
+	func delete(_ obj: NSManagedObject) {
+		self.bgContext.delete(obj)
+	}
+	
 	
 	func fetchAllLogEntries() -> [LogEntry]? {
 		do {
-			if let entries = try persistentContainer.viewContext.fetch(fetchLogEntries) as? [LogEntry] {
-				return entries
-			}
+			return try context.fetch(fetchLogEntries)
 		} catch {
 			NSLog("Failed to fetch entries from Core Data: \(error)")
 			appDel.viewCon.alert(title: "Failed to fetch data", msg: "Unable to fetch log entries from the database.", style: .alert)
@@ -54,9 +76,7 @@ class DatabaseManager {
 	
 	func fetchAllSessions() -> [Session]? {
 		do {
-			if let entries = try persistentContainer.viewContext.fetch(fetchSessions) as? [Session] {
-				return entries
-			}
+			return try context.fetch(fetchSessions)
 		} catch {
 			NSLog("Failed to fetch entries from Core Data: \(error)")
 			appDel.viewCon.alert(title: "Failed to fetch data", msg: "Unable to fetch log entries from the database.", style: .alert)
@@ -67,9 +87,9 @@ class DatabaseManager {
 	// MARK: - Core Data Saving support
 	
 	@objc private func saveContext() {
-		if persistentContainer.viewContext.hasChanges {
+		if context.hasChanges {
 			do {
-				try persistentContainer.viewContext.save()
+				try context.save()
 				NSLog("Saved Core Data.")
 			} catch {
 				// Replace this implementation with code to handle the error appropriately.

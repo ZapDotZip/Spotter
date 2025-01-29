@@ -58,7 +58,7 @@ class SessionTableDataSource: NSObject, UITableViewDataSource, UITableViewDelega
 	
 	func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 		if editingStyle == .delete {
-			dbm.persistentContainer.viewContext.delete(entries[indexPath.row])
+			dbm.delete(entries[indexPath.row])
 			dbm.save(now: false)
 			entries.remove(at: indexPath.row)
 			tableView.deleteRows(at: [indexPath], with: .automatic)
