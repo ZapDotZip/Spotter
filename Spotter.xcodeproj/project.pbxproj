@@ -13,6 +13,7 @@
 		ED4CFD582D28A1C900C96700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4CFD4A2D28A1C900C96700 /* LaunchScreen.storyboard */; };
 		ED4CFD592D28A1C900C96700 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4CFD4C2D28A1C900C96700 /* Main.storyboard */; };
 		ED4CFD612D2A02C600C96700 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4CFD602D2A02C600C96700 /* LocationController.swift */; };
+		ED9BCE172D4AE8B300704EAC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9BCE162D4AE8B300704EAC /* SettingsViewController.swift */; };
 		EDBFD9972D3AE12A0087426F /* LogTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBFD9962D3AE12A0087426F /* LogTable.swift */; };
 		EDBFD9C32D4056D90087426F /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBFD9C22D4056D90087426F /* Settings.storyboard */; };
 		EDBFD9C52D406B740087426F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBFD9C42D406B740087426F /* SessionManager.swift */; };
@@ -55,6 +56,7 @@
 		ED4CFD4B2D28A1C900C96700 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED4CFD512D28A1C900C96700 /* Spotter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Spotter.xcdatamodel; sourceTree = "<group>"; };
 		ED4CFD602D2A02C600C96700 /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
+		ED9BCE162D4AE8B300704EAC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EDBFD9962D3AE12A0087426F /* LogTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTable.swift; sourceTree = "<group>"; };
 		EDBFD9C22D4056D90087426F /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		EDBFD9C42D406B740087426F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 				EDC7CAC42D4851E400E9038A /* MapViewCon.swift */,
 				EDC7CAC32D4851E400E9038A /* CustomMapViewDelegate.swift */,
 				EDC7CAC12D4851E400E9038A /* ChartView.swift */,
+				ED9BCE162D4AE8B300704EAC /* SettingsViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				EDC7CACD2D4851E400E9038A /* SceneDelegate.swift in Sources */,
 				EDC7CACE2D4851E400E9038A /* SessionTable.swift in Sources */,
 				EDC7CACF2D4851E400E9038A /* TabViewController.swift in Sources */,
+				ED9BCE172D4AE8B300704EAC /* SettingsViewController.swift in Sources */,
 				EDBFD9C52D406B740087426F /* SessionManager.swift in Sources */,
 				EDBFD9972D3AE12A0087426F /* LogTable.swift in Sources */,
 				EDC7CABD2D46F77B00E9038A /* LogEntryExtensions.swift in Sources */,

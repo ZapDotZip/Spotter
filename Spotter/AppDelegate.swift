@@ -13,6 +13,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	var dfTimeOnly = DateFormatter()
 	var briefDF = DateFormatter()
 	var dbm: DatabaseManager!
+	
+	override init() {
+		UserDefaults.standard.register(defaults: [
+			SettingsViewController.mapDisplayTypeKey : "Static",
+		])
+	}
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.

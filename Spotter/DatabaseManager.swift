@@ -84,6 +84,10 @@ class DatabaseManager {
 		return nil
 	}
 	
+	func resetDatabase() {
+		
+	}
+	
 	// MARK: - Core Data Saving support
 	
 	@objc private func saveContext() {

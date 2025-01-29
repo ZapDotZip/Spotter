@@ -15,7 +15,8 @@ class MapViewCon: UIViewController {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		mapView.delegate = mvd
+		setDisplayModePref()
+		UserDefaults.standard.addObserver(self, forKeyPath: SettingsViewController.mapDisplayTypeKey, options: .new, context: nil)
 		if let loc = LocationController.shared.locationManager.location {
 			mapView.showsUserLocation = true
 			if #available(iOS 17.0, *) {
@@ -25,13 +26,30 @@ class MapViewCon: UIViewController {
 		}
 	}
 	
+	func setDisplayModePref() {
+		if UserDefaults.standard.string(forKey: SettingsViewController.mapDisplayTypeKey) == "Static" {
+			mapView.delegate = mvd
+		} else {
+			mapView.delegate = nil
+		}
+	}
+	
+	override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+		if keyPath == SettingsViewController.mapDisplayTypeKey {
+			setDisplayModePref()
+			displayPoints(lastDisplayedPoints)
+		}
+	}
+	
 	func gatherPoints(from entries: [LogEntry]) -> [MKAnnotation] {
 		return entries.map { le in
 			return LogEntryPoint(le: le, df: appDel.dfFullDate)
 		}
 	}
 	
+	private var lastDisplayedPoints: [MKAnnotation] = []
 	func displayPoints(_ list: [MKAnnotation]) {
+		lastDisplayedPoints = list
 		mapView.removeAnnotations(mapView.annotations)
 		mapView.addAnnotations(list)
 		
