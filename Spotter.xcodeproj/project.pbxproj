@@ -14,6 +14,18 @@
 		ED4CFD592D28A1C900C96700 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED4CFD4C2D28A1C900C96700 /* Main.storyboard */; };
 		ED4CFD612D2A02C600C96700 /* LocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4CFD602D2A02C600C96700 /* LocationController.swift */; };
 		ED9BCE172D4AE8B300704EAC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9BCE162D4AE8B300704EAC /* SettingsViewController.swift */; };
+		ED9BCE3F2D4D798D00704EAC /* SpotterWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = ED9BCE1C2D4D798B00704EAC /* SpotterWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		ED9BCE502D4D7A8700704EAC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9BCE4D2D4D7A8700704EAC /* ContentView.swift */; };
+		ED9BCE512D4D7A8700704EAC /* SpotterWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9BCE4E2D4D7A8700704EAC /* SpotterWatchApp.swift */; };
+		ED9BCE522D4D7A8700704EAC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED9BCE4A2D4D7A8700704EAC /* Preview Assets.xcassets */; };
+		ED9BCE532D4D7A8700704EAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED9BCE4C2D4D7A8700704EAC /* Assets.xcassets */; };
+		ED9BCE552D4D886B00704EAC /* WCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9BCE542D4D886B00704EAC /* WCDelegate.swift */; };
+		ED9BCE5B2D4D977200704EAC /* SpotterWatchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9BCE582D4D977200704EAC /* SpotterWatchUITests.swift */; };
+		ED9BCE5C2D4D977200704EAC /* SpotterWatchUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9BCE592D4D977200704EAC /* SpotterWatchUITestsLaunchTests.swift */; };
+		ED9BCE5F2D4D977500704EAC /* SpotterWatchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9BCE5D2D4D977500704EAC /* SpotterWatchTests.swift */; };
+		ED9BCE632D4D977800704EAC /* SpotterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9BCE602D4D977800704EAC /* SpotterUITests.swift */; };
+		ED9BCE642D4D977800704EAC /* SpotterUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9BCE612D4D977800704EAC /* SpotterUITestsLaunchTests.swift */; };
+		ED9BCE672D4D977A00704EAC /* SpotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9BCE652D4D977A00704EAC /* SpotterTests.swift */; };
 		EDBFD9972D3AE12A0087426F /* LogTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBFD9962D3AE12A0087426F /* LogTable.swift */; };
 		EDBFD9C32D4056D90087426F /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDBFD9C22D4056D90087426F /* Settings.storyboard */; };
 		EDBFD9C52D406B740087426F /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDBFD9C42D406B740087426F /* SessionManager.swift */; };
@@ -43,7 +55,42 @@
 			remoteGlobalIDString = ED4CFD0E2D2899E800C96700;
 			remoteInfo = Spotter;
 		};
+		ED9BCE2C2D4D798D00704EAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED4CFD072D2899E800C96700 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED9BCE1B2D4D798B00704EAC;
+			remoteInfo = "SpotterWatch Watch App";
+		};
+		ED9BCE362D4D798D00704EAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED4CFD072D2899E800C96700 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED9BCE1B2D4D798B00704EAC;
+			remoteInfo = "SpotterWatch Watch App";
+		};
+		ED9BCE3D2D4D798D00704EAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED4CFD072D2899E800C96700 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED9BCE1B2D4D798B00704EAC;
+			remoteInfo = "SpotterWatch Watch App";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ED9BCE432D4D798D00704EAC /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				ED9BCE3F2D4D798D00704EAC /* SpotterWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		ED4CFD0F2D2899E800C96700 /* Spotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +104,20 @@
 		ED4CFD512D28A1C900C96700 /* Spotter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Spotter.xcdatamodel; sourceTree = "<group>"; };
 		ED4CFD602D2A02C600C96700 /* LocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationController.swift; sourceTree = "<group>"; };
 		ED9BCE162D4AE8B300704EAC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		ED9BCE1C2D4D798B00704EAC /* SpotterWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpotterWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED9BCE2B2D4D798D00704EAC /* SpotterWatch Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SpotterWatch Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED9BCE352D4D798D00704EAC /* SpotterWatch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SpotterWatch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED9BCE4A2D4D7A8700704EAC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ED9BCE4C2D4D7A8700704EAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED9BCE4D2D4D7A8700704EAC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ED9BCE4E2D4D7A8700704EAC /* SpotterWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotterWatchApp.swift; sourceTree = "<group>"; };
+		ED9BCE542D4D886B00704EAC /* WCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WCDelegate.swift; sourceTree = "<group>"; };
+		ED9BCE582D4D977200704EAC /* SpotterWatchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotterWatchUITests.swift; sourceTree = "<group>"; };
+		ED9BCE592D4D977200704EAC /* SpotterWatchUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotterWatchUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ED9BCE5D2D4D977500704EAC /* SpotterWatchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotterWatchTests.swift; sourceTree = "<group>"; };
+		ED9BCE602D4D977800704EAC /* SpotterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotterUITests.swift; sourceTree = "<group>"; };
+		ED9BCE612D4D977800704EAC /* SpotterUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotterUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ED9BCE652D4D977A00704EAC /* SpotterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotterTests.swift; sourceTree = "<group>"; };
 		EDBFD9962D3AE12A0087426F /* LogTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTable.swift; sourceTree = "<group>"; };
 		EDBFD9C22D4056D90087426F /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
 		EDBFD9C42D406B740087426F /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
@@ -70,19 +131,6 @@
 		EDC7CAC72D4851E400E9038A /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		EDC7CAD02D48531300E9038A /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		ED4CFD2B2D2899E900C96700 /* SpotterTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SpotterTests;
-			sourceTree = "<group>";
-		};
-		ED4CFD352D2899E900C96700 /* SpotterUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SpotterUITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		ED4CFD0C2D2899E800C96700 /* Frameworks */ = {
@@ -106,6 +154,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ED9BCE192D4D798B00704EAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED9BCE282D4D798D00704EAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED9BCE322D4D798D00704EAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -113,8 +182,11 @@
 			isa = PBXGroup;
 			children = (
 				ED4CFD502D28A1C900C96700 /* Spotter */,
-				ED4CFD2B2D2899E900C96700 /* SpotterTests */,
-				ED4CFD352D2899E900C96700 /* SpotterUITests */,
+				ED9BCE662D4D977A00704EAC /* SpotterTests */,
+				ED9BCE622D4D977800704EAC /* SpotterUITests */,
+				ED9BCE4F2D4D7A8700704EAC /* SpotterWatch */,
+				ED9BCE5E2D4D977500704EAC /* SpotterWatchTests */,
+				ED9BCE5A2D4D977200704EAC /* SpotterWatchUITests */,
 				ED4CFD102D2899E800C96700 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,6 +197,9 @@
 				ED4CFD0F2D2899E800C96700 /* Spotter.app */,
 				ED4CFD282D2899E900C96700 /* SpotterTests.xctest */,
 				ED4CFD322D2899E900C96700 /* SpotterUITests.xctest */,
+				ED9BCE1C2D4D798B00704EAC /* SpotterWatch Watch App.app */,
+				ED9BCE2B2D4D798D00704EAC /* SpotterWatch Watch AppTests.xctest */,
+				ED9BCE352D4D798D00704EAC /* SpotterWatch Watch AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,6 +221,60 @@
 				ED4CFD4E2D28A1C900C96700 /* Spotter.xcdatamodeld */,
 			);
 			path = Spotter;
+			sourceTree = "<group>";
+		};
+		ED9BCE4B2D4D7A8700704EAC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				ED9BCE4A2D4D7A8700704EAC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ED9BCE4F2D4D7A8700704EAC /* SpotterWatch */ = {
+			isa = PBXGroup;
+			children = (
+				ED9BCE4E2D4D7A8700704EAC /* SpotterWatchApp.swift */,
+				ED9BCE4D2D4D7A8700704EAC /* ContentView.swift */,
+				ED9BCE4C2D4D7A8700704EAC /* Assets.xcassets */,
+				ED9BCE4B2D4D7A8700704EAC /* Preview Content */,
+				ED9BCE542D4D886B00704EAC /* WCDelegate.swift */,
+			);
+			path = SpotterWatch;
+			sourceTree = "<group>";
+		};
+		ED9BCE5A2D4D977200704EAC /* SpotterWatchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ED9BCE582D4D977200704EAC /* SpotterWatchUITests.swift */,
+				ED9BCE592D4D977200704EAC /* SpotterWatchUITestsLaunchTests.swift */,
+			);
+			path = SpotterWatchUITests;
+			sourceTree = "<group>";
+		};
+		ED9BCE5E2D4D977500704EAC /* SpotterWatchTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED9BCE5D2D4D977500704EAC /* SpotterWatchTests.swift */,
+			);
+			path = SpotterWatchTests;
+			sourceTree = "<group>";
+		};
+		ED9BCE622D4D977800704EAC /* SpotterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ED9BCE602D4D977800704EAC /* SpotterUITests.swift */,
+				ED9BCE612D4D977800704EAC /* SpotterUITestsLaunchTests.swift */,
+			);
+			path = SpotterUITests;
+			sourceTree = "<group>";
+		};
+		ED9BCE662D4D977A00704EAC /* SpotterTests */ = {
+			isa = PBXGroup;
+			children = (
+				ED9BCE652D4D977A00704EAC /* SpotterTests.swift */,
+			);
+			path = SpotterTests;
 			sourceTree = "<group>";
 		};
 		EDC7CAC82D4851E400E9038A /* UI */ = {
@@ -174,10 +303,12 @@
 				ED4CFD0B2D2899E800C96700 /* Sources */,
 				ED4CFD0C2D2899E800C96700 /* Frameworks */,
 				ED4CFD0D2D2899E800C96700 /* Resources */,
+				ED9BCE432D4D798D00704EAC /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				ED9BCE3E2D4D798D00704EAC /* PBXTargetDependency */,
 			);
 			name = Spotter;
 			packageProductDependencies = (
@@ -199,9 +330,6 @@
 			dependencies = (
 				ED4CFD2A2D2899E900C96700 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				ED4CFD2B2D2899E900C96700 /* SpotterTests */,
-			);
 			name = SpotterTests;
 			packageProductDependencies = (
 			);
@@ -222,14 +350,70 @@
 			dependencies = (
 				ED4CFD342D2899E900C96700 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				ED4CFD352D2899E900C96700 /* SpotterUITests */,
-			);
 			name = SpotterUITests;
 			packageProductDependencies = (
 			);
 			productName = SpotterUITests;
 			productReference = ED4CFD322D2899E900C96700 /* SpotterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		ED9BCE1B2D4D798B00704EAC /* SpotterWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED9BCE402D4D798D00704EAC /* Build configuration list for PBXNativeTarget "SpotterWatch Watch App" */;
+			buildPhases = (
+				ED9BCE182D4D798B00704EAC /* Sources */,
+				ED9BCE192D4D798B00704EAC /* Frameworks */,
+				ED9BCE1A2D4D798B00704EAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SpotterWatch Watch App";
+			packageProductDependencies = (
+			);
+			productName = "SpotterWatch Watch App";
+			productReference = ED9BCE1C2D4D798B00704EAC /* SpotterWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ED9BCE2A2D4D798D00704EAC /* SpotterWatch Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED9BCE442D4D798D00704EAC /* Build configuration list for PBXNativeTarget "SpotterWatch Watch AppTests" */;
+			buildPhases = (
+				ED9BCE272D4D798D00704EAC /* Sources */,
+				ED9BCE282D4D798D00704EAC /* Frameworks */,
+				ED9BCE292D4D798D00704EAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED9BCE2D2D4D798D00704EAC /* PBXTargetDependency */,
+			);
+			name = "SpotterWatch Watch AppTests";
+			packageProductDependencies = (
+			);
+			productName = "SpotterWatch Watch AppTests";
+			productReference = ED9BCE2B2D4D798D00704EAC /* SpotterWatch Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ED9BCE342D4D798D00704EAC /* SpotterWatch Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED9BCE472D4D798D00704EAC /* Build configuration list for PBXNativeTarget "SpotterWatch Watch AppUITests" */;
+			buildPhases = (
+				ED9BCE312D4D798D00704EAC /* Sources */,
+				ED9BCE322D4D798D00704EAC /* Frameworks */,
+				ED9BCE332D4D798D00704EAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ED9BCE372D4D798D00704EAC /* PBXTargetDependency */,
+			);
+			name = "SpotterWatch Watch AppUITests";
+			packageProductDependencies = (
+			);
+			productName = "SpotterWatch Watch AppUITests";
+			productReference = ED9BCE352D4D798D00704EAC /* SpotterWatch Watch AppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -253,6 +437,17 @@
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = ED4CFD0E2D2899E800C96700;
 					};
+					ED9BCE1B2D4D798B00704EAC = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					ED9BCE2A2D4D798D00704EAC = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = ED9BCE1B2D4D798B00704EAC;
+					};
+					ED9BCE342D4D798D00704EAC = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = ED9BCE1B2D4D798B00704EAC;
+					};
 				};
 			};
 			buildConfigurationList = ED4CFD0A2D2899E800C96700 /* Build configuration list for PBXProject "Spotter" */;
@@ -272,6 +467,9 @@
 				ED4CFD0E2D2899E800C96700 /* Spotter */,
 				ED4CFD272D2899E900C96700 /* SpotterTests */,
 				ED4CFD312D2899E900C96700 /* SpotterUITests */,
+				ED9BCE1B2D4D798B00704EAC /* SpotterWatch Watch App */,
+				ED9BCE2A2D4D798D00704EAC /* SpotterWatch Watch AppTests */,
+				ED9BCE342D4D798D00704EAC /* SpotterWatch Watch AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -296,6 +494,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		ED4CFD302D2899E900C96700 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED9BCE1A2D4D798B00704EAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED9BCE522D4D7A8700704EAC /* Preview Assets.xcassets in Resources */,
+				ED9BCE532D4D7A8700704EAC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED9BCE292D4D798D00704EAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED9BCE332D4D798D00704EAC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -331,6 +552,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED9BCE672D4D977A00704EAC /* SpotterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +560,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED9BCE632D4D977800704EAC /* SpotterUITests.swift in Sources */,
+				ED9BCE642D4D977800704EAC /* SpotterUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED9BCE182D4D798B00704EAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED9BCE502D4D7A8700704EAC /* ContentView.swift in Sources */,
+				ED9BCE552D4D886B00704EAC /* WCDelegate.swift in Sources */,
+				ED9BCE512D4D7A8700704EAC /* SpotterWatchApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED9BCE272D4D798D00704EAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED9BCE5F2D4D977500704EAC /* SpotterWatchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED9BCE312D4D798D00704EAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED9BCE5B2D4D977200704EAC /* SpotterWatchUITests.swift in Sources */,
+				ED9BCE5C2D4D977200704EAC /* SpotterWatchUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,6 +604,21 @@
 			isa = PBXTargetDependency;
 			target = ED4CFD0E2D2899E800C96700 /* Spotter */;
 			targetProxy = ED4CFD332D2899E900C96700 /* PBXContainerItemProxy */;
+		};
+		ED9BCE2D2D4D798D00704EAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED9BCE1B2D4D798B00704EAC /* SpotterWatch Watch App */;
+			targetProxy = ED9BCE2C2D4D798D00704EAC /* PBXContainerItemProxy */;
+		};
+		ED9BCE372D4D798D00704EAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED9BCE1B2D4D798B00704EAC /* SpotterWatch Watch App */;
+			targetProxy = ED9BCE362D4D798D00704EAC /* PBXContainerItemProxy */;
+		};
+		ED9BCE3E2D4D798D00704EAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED9BCE1B2D4D798B00704EAC /* SpotterWatch Watch App */;
+			targetProxy = ED9BCE3D2D4D798D00704EAC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -625,6 +891,144 @@
 			};
 			name = Release;
 		};
+		ED9BCE412D4D798D00704EAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SpotterWatch/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Spotter;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = zap.zip.Spotter;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zap.zip.Spotter.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		ED9BCE422D4D798D00704EAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SpotterWatch/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Spotter;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = zap.zip.Spotter;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = zap.zip.Spotter.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
+		ED9BCE452D4D798D00704EAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zap.zip.SpotterWatch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpotterWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SpotterWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		ED9BCE462D4D798D00704EAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zap.zip.SpotterWatch-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpotterWatch Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SpotterWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
+		ED9BCE482D4D798D00704EAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zap.zip.SpotterWatch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "SpotterWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		ED9BCE492D4D798D00704EAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "zap.zip.SpotterWatch-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "SpotterWatch Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -660,6 +1064,33 @@
 			buildConfigurations = (
 				ED4CFD442D2899E900C96700 /* Debug */,
 				ED4CFD452D2899E900C96700 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED9BCE402D4D798D00704EAC /* Build configuration list for PBXNativeTarget "SpotterWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED9BCE412D4D798D00704EAC /* Debug */,
+				ED9BCE422D4D798D00704EAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED9BCE442D4D798D00704EAC /* Build configuration list for PBXNativeTarget "SpotterWatch Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED9BCE452D4D798D00704EAC /* Debug */,
+				ED9BCE462D4D798D00704EAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED9BCE472D4D798D00704EAC /* Build configuration list for PBXNativeTarget "SpotterWatch Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED9BCE482D4D798D00704EAC /* Debug */,
+				ED9BCE492D4D798D00704EAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
